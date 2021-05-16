@@ -9,7 +9,7 @@ vectorizer,classifier = load_objects() #load the model and vectorizer
 def index():
     return render_template('form.html')
 
-@app.route('/',methods=['POST']) #prediction on data
+@app.route('/',methods=['POST']) #prediction on text
 def predict():
     t_sentiment=''
     text = request.form['text'] #input is from forms
@@ -19,7 +19,7 @@ def predict():
     if preptext:
         preptext = np.array([preptext]) #change to list
         vector_text = vectorizer.transform(preptext) #vectorize text
-        predictions = classifier.predict_proba(vector_text) #making predictions
+        predictions = classifier.predict_proba(vector_text) #extracting probability of predicitions
         sentiment = int(np.argmax(predictions)) #index of maximum prediction
         if sentiment==0: #assigning appropriate name to prediction
             t_sentiment = 'negative'
