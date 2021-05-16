@@ -7,10 +7,7 @@ vectorizer,classifier = load_objects() #load the model and vectorizer
 
 @app.route("/")
 def index():
-    return "<h1>Hello Azure!</h1>"
-"""
-def index():
-    return render_template('form.html')"""
+    return render_template('form.html')
 
 @app.route('/predict',methods=['POST']) #prediction on data
 def predict():
