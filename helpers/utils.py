@@ -4,14 +4,9 @@ import json
 import string
 import pickle
 import numpy as np
-import nltk
-
-nltk.download('english')
-
 from nltk.corpus import stopwords
 from nltk.stem import SnowballStemmer
 from sklearn.feature_extraction.text import CountVectorizer
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 
 contraction_json = open('helpers/contraction.json',)

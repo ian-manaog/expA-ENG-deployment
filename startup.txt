@@ -1,1 +1,3 @@
-gunicorn --bind=0.0.0.0 --timeout 600 hello:myapp
+gunicorn --bind=0.0.0.0 --timeout 600 app:app
+python -m import nltk
+python -m nltk.download("english")
