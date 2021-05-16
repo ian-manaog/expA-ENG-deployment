@@ -32,3 +32,5 @@ def predict():
     else:
         return render_template('form.html', sentiment='none', text=text)
     
+if __name__ == "__main__":
+    app.run(debug=True)
