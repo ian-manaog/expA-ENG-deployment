@@ -1,6 +1,6 @@
 from flask import Flask, request, render_template
 from helpers.utils import *
-app = Flask('SA-ENG')
+app = Flask(__name__)
 
 vectorizer,classifier = load_objects() #load the model and vectorizer
 
