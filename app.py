@@ -1,7 +1,9 @@
+import nltk
 from flask import Flask, request, render_template
 from helpers.utils import *
 app = Flask(__name__)
 
+nltk.download('english')
 vectorizer,classifier = load_objects() #load the model and vectorizer
 
 
