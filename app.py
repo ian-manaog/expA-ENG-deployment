@@ -11,7 +11,7 @@ def index():
 
 @app.route('/',methods=['POST']) #prediction on text
 def predict():
-    t_sentiment=''
+    t_sentiment='' #initialize t_sentiment
     text = request.form['text'] #input is from forms
     preptext = preprocess(text) #cleaning and preprocessing of the texts
 
