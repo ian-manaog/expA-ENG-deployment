@@ -49,10 +49,10 @@ def preprocess(text):
     return text
 
 def load_objects():
-    file = open("vectorizer.pkl",'rb')
+    file = open("cvectorizer.pkl",'rb')
     vectorizer = pickle.load(file)
     file.close()
-    file = open("expA.pkl",'rb')
+    file = open("classifier.pkl",'rb')
     classifier = pickle.load(file)
     file.close()
     return vectorizer, classifier
