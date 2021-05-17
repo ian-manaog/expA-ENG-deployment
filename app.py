@@ -24,7 +24,7 @@ def predict():
         if sentiment==0: #assigning appropriate name to prediction
             t_sentiment = 'negative'
         elif sentiment==1:
-            t_sentiment = 'postive'
+            t_sentiment = 'positive'
         #In training the model, there was no neutral class in the dataset so only two classes are available
         
         return render_template('form.html', sentiment=t_sentiment, text=text)
